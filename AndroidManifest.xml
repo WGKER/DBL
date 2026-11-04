@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" android:installLocation="internalOnly" package="com.dangbei.tvlauncher" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.dangbei.tvlauncher.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <meta-data android:name="com.dangbei.launcher.util.glide.GlideModuleConfiguration" android:value="GlideModule"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_STORAGE"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <application android:allowBackup="true" android:banner="@drawable/banner_custom" android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:icon="@drawable/icon_4" android:label="@string/app_name" android:largeHeap="true" android:name="com.dangbei.ZMApplication" android:screenOrientation="landscape" android:sharedUserId="android.uid.system" android:supportsRtl="true" android:taskAffinity="com.dangbei.tvlauncher" android:theme="@style/AppThemeNew" android:usesCleartextTraffic="true">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="api_key" android:value="QrItKQaabhGU57azgFoV3lAx"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.dangbei.launcher.ui.main.MainActivity" android:screenOrientation="landscape" android:theme="@style/AppStartTheme" android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.MONKEY"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dangbei.launcher.ui.autoclean.AutoCleanActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <service android:name="com.dangbei.launcher.service.HomeKeyEventCatchService">
+            <intent-filter>
+                <action android:name=".Service.homeCatch"/>
+            </intent-filter>
+        </service>
+        <activity android:name="com.dangbei.update.view.UpdateDialog" android:screenOrientation="landscape" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <service android:name="com.dangbei.downloader.core.DownloadService"/>
+        <activity android:name="com.dangbei.launcher.ui.wallpaper.main.WallpaperSettingActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.set.version.SwitchVersionActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.wallpaper.preview.PreviewWallpaperActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:exported="true" android:name="com.dangbei.launcher.ui.screensaver.ScreensaverActivity" android:screenOrientation="landscape" android:theme="@style/AppMainTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.set.SetActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.set.CurrencySetActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.base.WebViewActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.screensaver.ScreensaverSetActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.set.WallpaperAndScreensaverSetActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.set.lock.PasswordSetActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.wallpaper.autoset.WallpaperAutoSetActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.set.wx.WxFastTransmissionSetActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.set.direct.DirectAppActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.set.file.FileFastTransmissionActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.set.wifi.WifiActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.set.AboutActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.autoclean.CleanActivity" android:screenOrientation="landscape" android:theme="@style/AppClearTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.screensaver.ScreensaverMyActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.set.u.UTransmissionSetActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:name="com.dangbei.launcher.ui.set.file.FileFastImagePreviewActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dangbei.launcher.ui.necessary.TvNecessaryActivity" android:screenOrientation="landscape" android:theme="@style/AppSetTheme"/>
+        <activity android:launchMode="singleTop" android:name="com.dangbei.launcher.ui.main.dialog.home.HomeDialogActivity" android:screenOrientation="landscape" android:theme="@style/AppStartThemeTransparent"/>
+        <activity android:launchMode="singleTop" android:name="com.dangbei.tvlauncher.IndexActivity" android:screenOrientation="landscape" android:theme="@style/AppStartThemeTransparent"/>
+        <service android:exported="false" android:name="com.dangbei.launcher.ui.screensaver.ScreensaverService"/>
+        <meta-data android:name="TD_APP_ID" android:value="7623ADFBA71A4587897D665CB24FE7D6"/>
+        <meta-data android:name="uid" android:value="umeng"/>
+        <meta-data android:name="euthenia_process" android:value="com.dangbei.tvlauncher"/>
+        <meta-data android:name="euthenia_channel" android:value="znds"/>
+        <provider android:authorities="com.dangbei.tvlauncher.dbfileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.dangbei.provider.DBFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/dbprovider_paths"/>
+        </provider>
+        <provider android:authorities="com.dangbei.tvlauncher.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.dangbei.launcher.impl.DbFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <provider android:authorities="com.dangbei.tvlauncher.openability" android:exported="true" android:name="com.dangbei.launcher.ability.OpenAbilityProvider"/>
+        <service android:name="com.dangbei.launcher.service.AutoClearAppService"/>
+        <receiver android:name="com.dangbei.launcher.receiver.ScreenBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_ON"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.dangbei.launcher.receiver.SystemEventReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter android:priority="1000">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.net.ethernet.ETH_STATE_CHANGED"/>
+                <action android:name="mitv.network.ethernet.action.ETHERNET_STATE_CHANGED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.server.action.NETWORK_STATS_UPDATED"/>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_EJECT"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.dangbei.launcher.receiver.BootReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="com.duokan.duokanplayer.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LETV_SCREENON"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.dangbei.yggdrasill.filemanager.filelist.YggdrasillFileListActivity" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="com.dangbei.yggdrasill.filemanager.singlefilelist.YggdrasillApkMusicListActivity" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="com.dangbei.yggdrasill.filemanager.singlefilelist.YggdrasillVideoPictureListActivity" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:exported="true" android:name="com.dangbei.yggdrasill.filemanager.usbinfo.YggdrasillUsbInfoActivity">
+            <intent-filter>
+                <action android:name="mimir.action.activity.file.manager.usb.info"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dangbei.yggdrasill.filemanager.usblist.YggDrasillFileManagerActivity"/>
+        <receiver android:name="com.dangbei.yggdrasill.filemanager.usblist.helper.FileManagerUsbReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_CHECKING"/>
+                <action android:name="android.intent.action.MEDIA_REMOVED"/>
+                <action android:name="android.intent.action.MEDIA_EJECT"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+        </receiver>
+        <activity android:launchMode="singleTop" android:name="com.dangbei.library.permission.PermissionUtils$PermissionActivity" android:screenOrientation="landscape" android:theme="@style/AndroidUtilsAppStartThemeTransparent"/>
+        <provider android:authorities="com.dangbei.tvlauncher.utilcode.provider" android:exported="false" android:grantUriPermissions="true" android:multiprocess="true" android:name="com.dangbei.library.utils.Utils$FileProvider4UtilCode">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/util_code_provider_paths"/>
+        </provider>
+        <activity android:configChanges="orientation" android:name="com.dangbei.flames.ui.detail.MessageDetailActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="orientation" android:name="com.dangbei.flames.ui.list.MessageListActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <service android:name="com.dangbei.flames.phrike.core.DownloadService"/>
+        <provider android:authorities="com.dangbei.tvlauncher.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.dangbei.flames.ui.reciver.FlamesFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/flames_file_path"/>
+        </provider>
+        <activity android:configChanges="orientation" android:name="com.dangbei.agreement.ui.CommonWebActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="orientation" android:name="com.dangbei.agreement.ui.AgreementActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="orientation" android:name="com.dangbei.agreement.ui.SettingActivity" android:screenOrientation="landscape" android:theme="@style/Translucent"/>
+        <service android:exported="false" android:name="com.dangbeimarket.downloader.DownloadService"/>
+        <meta-data android:name="palaemonVersion" android:value="1.0.6-SNAPSHOT"/>
+    </application>
+</manifest>
